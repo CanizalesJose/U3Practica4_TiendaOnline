@@ -26,5 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
     totalCompra.textContent = "Total: $"+totComp;
     totalProductos.textContent = "QTY Total: " + totProd;
 
+    const txtFecha = document.querySelector("#fecha");
+    var fecha = new Date();
+    txtFecha.textContent = fecha.getDay()+"/"+fecha.getMonth()+"/"+fecha.getFullYear()+" "+fecha.getHours()+":"+fecha.getMinutes()+":"+fecha.getSeconds();
+
 
 });

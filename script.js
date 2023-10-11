@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const catalogo = [
-        { id: 1, imagen: "https://images.pexels.com/photos/687811/pexels-photo-687811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", precio: 10 , nombre: "Control"},
-        { id: 2, imagen: "https://images.pexels.com/photos/7610446/pexels-photo-7610446.jpeg?auto=compress&cs=tinysrgb&w=600", precio: 15, nombre: "Laptop"},
-        { id: 3, imagen: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg?auto=compress&cs=tinysrgb&w=600", precio: 20, nombre: "Telefono"},
-        { id: 4, imagen :"https://images.pexels.com/photos/8000587/pexels-photo-8000587.jpeg?auto=compress&cs=tinysrgb&w=600", precio: 53, nombre: "Audifonos"}
+        { id: 1, imagen: "https://images.pexels.com/photos/687811/pexels-photo-687811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", precio: 1300 , nombre: "Control"},
+        { id: 2, imagen: "https://images.pexels.com/photos/7610446/pexels-photo-7610446.jpeg?auto=compress&cs=tinysrgb&w=600", precio: 10000, nombre: "Laptop"},
+        { id: 3, imagen: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg?auto=compress&cs=tinysrgb&w=600", precio: 8000, nombre: "Telefono"},
+        { id: 4, imagen :"https://images.pexels.com/photos/8000587/pexels-photo-8000587.jpeg?auto=compress&cs=tinysrgb&w=600", precio: 550, nombre: "Audifonos"}
     ];
 
     const catalogoContainer = document.getElementById("catalogo");
@@ -15,16 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const card = document.createElement("div");
         card.classList.add("col-md-4", "mb-4");
         card.innerHTML = `
-            <div class="card">
+            <div class="card bg-dark bg-gradient text-light rounded">
                 <img src="${producto.imagen}" class="card-img-top imgArticulo" alt="Producto ${producto.id}">
                 <div class="card-body">
                     <h5 class="card-title">${producto.id}: ${producto.nombre}</h5>
-                    <p class="card-text">Precio: ${producto.precio}
+                    <p class="card-text">Precio: $${producto.precio}
                     <br>
                     Cantidad: <input type="number" class="cantidad" id="cantidadProducto${producto.id}">
                     <br><br>
                     </p>
                     <button type="button" class="btn btn-primary agregar"> Agregar al Carrito </button>
+                </div>
+            </div>
                 
             
         `;
@@ -67,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         carrito.forEach((item) => {
             const fila = document.createElement("tr");
             fila.innerHTML = `
-                <td>Producto ${item.producto.id}</td>
+                <td>${item.producto.nombre}</td>
                 <td>${item.cantidad}</td>
                 <td>${item.producto.precio * item.cantidad}</td>
             `;
