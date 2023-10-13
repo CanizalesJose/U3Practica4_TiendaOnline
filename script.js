@@ -2,8 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const catalogo = [
         { id: 1, imagen: "https://images.pexels.com/photos/687811/pexels-photo-687811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", precio: 1300 , nombre: "Control"},
         { id: 2, imagen: "https://images.pexels.com/photos/7610446/pexels-photo-7610446.jpeg?auto=compress&cs=tinysrgb&w=600", precio: 10000, nombre: "Laptop"},
-        { id: 3, imagen: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg?auto=compress&cs=tinysrgb&w=600", precio: 8000, nombre: "Telefono"},
-        { id: 4, imagen :"https://images.pexels.com/photos/8000587/pexels-photo-8000587.jpeg?auto=compress&cs=tinysrgb&w=600", precio: 550, nombre: "Audifonos"}
+        { id: 3, imagen: "https://images.pexels.com/photos/1542252/pexels-photo-1542252.jpeg?auto=compress&cs=tinysrgb&w=600", precio: 8000, nombre: "Teléfono"},
+        { id: 4, imagen :"https://images.pexels.com/photos/8000587/pexels-photo-8000587.jpeg?auto=compress&cs=tinysrgb&w=600", precio: 550, nombre: "Audífonos"},
+        { id: 5, imagen: "https://cdn.pixabay.com/photo/2016/01/10/21/05/mic-1132528_1280.jpg", precio: 350, nombre: "Micrófono"},
+        { id: 6, imagen: "https://cdn.pixabay.com/photo/2014/02/27/16/09/microscope-275984_1280.jpg", precio: 2400, nombre: "Microscopio"},
+        { id: 7, imagen: "https://cdn.pixabay.com/photo/2011/03/01/03/55/iron-5112_640.jpg", precio: 450, nombre: "Plancha Eléctrica"},
+        { id: 8, imagen: "https://cdn.pixabay.com/photo/2011/02/07/14/01/razor-4840_1280.jpg", precio: 350, nombre: "Rasuradora"},
+        { id: 9, imagen: "https://cdn.pixabay.com/photo/2018/10/31/16/30/robot-vacuum-cleaner-3786243_640.jpg", precio: 2500, nombre: "Aspiradora Autónoma"}
     ];
 
     const catalogoContainer = document.getElementById("catalogo");
